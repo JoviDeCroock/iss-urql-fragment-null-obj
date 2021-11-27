@@ -1,0 +1,16 @@
+fragment PLAYER_FRAGMENT on Player {
+	id
+	description
+	team {
+		...TEAM_FRAGMENT
+	}
+}
+
+query player($id: ID!) {
+	player(id: $id) {
+		...PLAYER_FRAGMENT
+		# team {
+		# 	...TEAM
+		# }
+	}
+}

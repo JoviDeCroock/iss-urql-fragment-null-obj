@@ -1,0 +1,21 @@
+schema: ./src/lib/graphql/schema.graphql
+
+documents: ./src/lib/graphql/queries/**/*.graphql
+
+generates:
+  ./src/lib/graphql/generated/queries.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+    config:
+      useTypeImports: true
+      dedupeFragments: true
+
+  ./src/lib/graphql/generated/schema.json:
+    plugins:
+      - urql-introspection
+
+  ./src/lib/graphql/generated/graphcache.d.ts:
+    plugins:
+      - typescript-urql-graphcache

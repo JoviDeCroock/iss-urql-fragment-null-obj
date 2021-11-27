@@ -1,0 +1,18 @@
+scalar Time
+
+type Query {
+	player(id: ID!): Player!
+	team(id: ID!): Team!
+}
+
+type Player {
+	id: ID!
+	description: String!
+	team: Team
+}
+
+type Team {
+	id: ID!
+	description: String!
+	player: Player
+}
