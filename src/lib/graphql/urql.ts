@@ -24,7 +24,7 @@ function newClient() {
 	];
 
 	return new Client({
-		url: 'https://h1pcl.sse.codesandbox.io',
+		url: 'https://hbmvs.sse.codesandbox.io/',
 		exchanges,
 		maskTypename: true
 	});
